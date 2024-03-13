@@ -7,13 +7,19 @@
   font-weight: normal;
   font-style: normal;
 }
-
+body {
+  position: relative;
+}
 :root {
   max-width: 1440px;
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   font-size: 16px;
   margin: auto;
+  --tisi: 2.1875rem;
+  --menub: 1.312rem;
+  --menus: 0.857em;
+  --menuf: 0.875rem;
   --bc: #144aaa;
   --ac: #f0f4ff;
   --bgc: #333333;
@@ -61,7 +67,7 @@ Light → 300
 
 .hd li {
   top: 20px;
-  font-size: 1.312rem;
+  font-size: var(--menub);
   position: relative;
   padding: 1rem 0;
   list-style-type: none;
@@ -90,6 +96,7 @@ Light → 300
   transition: opacity 0.5s;
   opacity: 0;
   height: 0;
+  /* display: flex; */
 }
 .sub a {
 }
@@ -114,14 +121,35 @@ Light → 300
 
 .hd .func {
   display: flex;
-  font-size: 0.875rem;
+  font-size: var(--menuf);
+}
+/* ---------------------------------------------------- */
+.eduMonth {
+  background-color: var(--bc);
+  color: white;
+}
+.eduMonth h2 {
+  font-size: var(--tisi);
+}
+.eduMonth a {
+  color: white;
+}
+.eduMonth img {
+  width: 10px;
+}
+.eduMonth .eduslide p:nth-of-type(1) {
+  display: flex;
+}
+.eduMonth .eduslide p:nth-of-type(2) {
+}
+.eduMonth {
 }
 
 .swiper {
   width: 100%;
   height: 100%;
 }
-.swiper-slide {
+.eduslide {
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -130,13 +158,13 @@ Light → 300
   align-items: center;
 }
 
-.swiper-slide img {
+.eduslide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
+/* -------------------------------------------------- */
 .swiper-pagination-bullet {
   width: 20px;
   height: 20px;
@@ -152,12 +180,15 @@ Light → 300
   color: #fff;
   background: #007aff;
 }
+
+/* -------------------------------------------------------- */
+
 .ourCenter {
   position: relative;
 }
 
 .ourCenter h2 {
-  font-size: 2.1875rem;
+  font-size: var(--tisi);
   font-weight: 900;
 }
 .ourCenter p {
@@ -170,10 +201,12 @@ Light → 300
   right: 100px;
 }
 .ourCenter .more {
-  font-size: 0.875rem;
+  font-size: var(--menuf);
   border: solid 1px color #144aaa;
   border-radius: 50%;
 }
+
+/* ----------------------------------------------------- */
 
 .new {
   background-color: white;
@@ -195,6 +228,8 @@ Light → 300
 .new li > time {
 }
 
+/* ---------------------------------------------- */
+
 .foot {
   color: white;
   background-color: black;
@@ -213,7 +248,7 @@ Light → 300
   left: 0;
   width: 120px;
 }
-
+/* ------------------------------------------------------- */
 .goTop {
   color: white;
   background-color: #144aaa;
@@ -224,4 +259,7 @@ Light → 300
   position: absolute;
   right: 10px;
   bottom: 10px;
+  transition: 0.3s;
 }
+
+/* 클릭하면 #hd로 가야함 */
